@@ -5,6 +5,264 @@
  * Site Styles
  *****************************************************************************/
 
- html {
-     color: green;
- }
+html {
+	padding: 0;
+	background-color: #f2cac8;
+}
+
+header {
+	min-height: 400px;
+	background-image: url('../img/monkaa_title.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.subtitle {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	font-family: "Futura", Gadget, sans-serif;
+}
+
+h1 {
+	margin: 0;
+	font-size: 40px;
+	letter-spacing: 3px;
+}
+
+h2 {
+	font-size: 30px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 20px;
+	letter-spacing: -1px;
+}
+
+p {
+	font-size: 15px;
+	line-height: 22px;
+}
+
+/* Styling navigation. */
+
+.main-nav ul {
+	list-style-type: none;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-end;
+}
+
+.main-nav li {
+	float: left;
+}
+
+.main-nav li a {
+	text-decoration: none;
+	background-color: #f44366;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	border-radius: 20px;
+}
+
+.main-nav li a:hover {
+	background-color: green;
+	border-radius: 20px;
+	color: white;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#social {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	width: 25px;
+	transition: 2s width;
+}
+
+#social:hover {
+	width: 175px;
+}
+
+/* Style font awesome social media icons */
+
+.fa {
+	margin-bottom: 5px;
+	padding: 10px;
+	font-size: 30px;
+	width: 150px;
+	text-align: left;
+	text-decoration: none;
+}
+
+.fa:hover {
+	opacity: 0.7;
+}
+
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+
+.fa-twitter {
+	background: #55ACEE;
+	color: white;
+}
+
+.fa-instagram {
+	background: #125688;
+	color: white;
+}
+
+#watch {
+	max-width: 800px;
+	margin: auto;
+}
+
+#video {
+	width: 100%;
+	height: auto;
+}
+
+#audio {
+	min-width: 100%;
+}
+
+/* Style download button */
+
+.download-button {
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+	background-color: #F44366;
+	color: white;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 0.9em;
+	text-align: center;
+	text-indent: 15px;
+}
+
+.download-button:hover {
+	background-color: green;
+	color: white;
+}
+
+.download-button:before,
+.download-button:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+/* Download box shape  */
+
+.download-button:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+
+.download-button:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.download-button:hover:before {
+	border-color: #F44366;
+}
+
+.download-button:hover:after {
+	border-top-color: #F44366;
+	animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
+
+#listen {
+	max-width: 800px;
+	margin: auto;
+}
+
+#about {
+	max-width: 800px;
+	margin: auto;
+}
+
+.lead {
+	font-size: 20px;
+	line-height: 1.6em;
+}
+
+.headshot {
+	max-width: 200px;
+}
+
+.weybec-people {
+	display: flex;
+	justify-content: space-around;
+}
+
+.weybec-people:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+footer {
+	min-height: 300px;
+	background-image: url('../img/official_header.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+footer p {
+	font-family: "Futura", Gadget, sans-serif;
+	font-size: small;
+	color: white;
+	text-align: center;
+}
